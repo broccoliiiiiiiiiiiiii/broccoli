@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "prettier --write . --config .prettierrc --ignore-path .prettierignore --cache"
   },
   "keywords": [
     "astro",
@@ -22,8 +23,7 @@
     "responsive",
     "ui-library",
     "ui-components",
-    "blog",
-    "portfolio"
+    "blog"
   ],
   "repository": {
     "type": "git",

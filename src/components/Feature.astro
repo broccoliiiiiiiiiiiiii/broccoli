@@ -7,36 +7,52 @@ import { Icon } from 'astro-icon/components'
  * @description A component that displays a feature with an icon, title, and description
  */
 interface Props {
-  /**
-   * The icon to display
-   */
   icon: string
-  /**
-   * The title to display
-   */
   title: string
+  href?: string
 }
 
-const { icon = 'mdi:rocket', title = 'Title' }: Props = Astro.props
+const { icon = 'mdi:rocket', title = 'Title', href }: Props = Astro.props
 ---
 
-<div class="feature flex flex-col gap-4">
-  <Icon name={icon} />
-  <div class="content">
-    <h3 class="text-2xl font-bold">{title}</h3>
-    <p>
-      <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, corporis.</slot>
-    </p>
+{href ? (
+  <a href={href} class="no-underline">
+    <div class="feature flex flex-col gap-4">
+      <Icon name={icon} />
+      <div class="content">
+        <h3 class="text-2xl font-bold">{title}</h3>
+        <p>
+          <slot />
+        </p>
+      </div>
+    </div>
+  </a>
+) : (
+  <div class="feature flex flex-col gap-4">
+    <Icon name={icon} />
+    <div class="content">
+      <h3 class="text-2xl font-bold">{title}</h3>
+      <p>
+        <slot />
+      </p>
+    </div>
   </div>
-</div>
+)}
+
 
 <style lang="scss">
   @use '../assets/scss/base/breakpoint' as *;
+a {
+  text-decoration: none ;
+}
+
+
 
   .feature {
     position: relative;
     padding: var(--space-l);
     inline-size: calc(100% - var(--space-l));
+
 
     > * {
       position: relative;
@@ -70,6 +86,9 @@ const { icon = 'mdi:rocket', title = 'Title' }: Props = Astro.props
     }
   }
 
+
+
+
   :global(.feature [data-icon]) {
     inline-size: 4rem;
     block-size: auto;
@@ -80,4 +99,6 @@ const { icon = 'mdi:rocket', title = 'Title' }: Props = Astro.props
     box-shadow: 0 0 0 6px var(--color-neutral-900);
     background-color: var(--color-neutral-900);
   }
+
+
 </style>

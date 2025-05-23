@@ -5,9 +5,8 @@ import Feature from '@components/Feature.astro'
 import Counter from '@components/Counter.astro'
 import ContentMedia from '@components/ContentMedia.astro'
 import ExternalLink from '@components/ExternalLink.astro'
-import {  Avatar, AvatarGroup } from 'accessible-astro-components'
-import { StarsBackground } from "@components/StartsBackground";
-import Faq from '@components/Faq.astro'
+import { Avatar, AvatarGroup } from 'accessible-astro-components'
+import { StarsBackground } from '@components/StartsBackground'
 ---
 
 <DefaultLayout title="Home">
@@ -15,36 +14,10 @@ import Faq from '@components/Faq.astro'
   <StarsBackground client:load />
   <section class="my-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
+      <h2 class="mb-16 text-6xl">Projects</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="lucide:accessibility" title="Accessible by default">
-          Keyboard navigation, focus indicators, ARIA labels, semantic HTML, and more. This theme is designed to be
-          inclusive.
-        </Feature>
-        <Feature icon="lucide:puzzle" title="A11Y components">
-          25+ components and counting, all tried and tested for the most optimal accessible experience for your
-          visitors.
-        </Feature>
-        <Feature icon="lucide:moon" title="Dark mode">
-          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
-        </Feature>
-        <Feature icon="lucide:paintbrush" title="Tailwind 4.0">
-          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
-        </Feature>
-        <Feature icon="lucide:sparkles" title="Prettier">
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
-        </Feature>
-        <Feature icon="lucide:code" title="ESLint">
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
-        </Feature>
-        <Feature icon="lucide:bookmark" title="Blog & portfolio">
-          This theme comes with a fully integrated blog and portfolio, dynamic pages and SEO optimization.
-        </Feature>
-        <Feature icon="lucide:file-text" title="Markdown & MDX">
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
-        </Feature>
-        <Feature icon="lucide:blocks" title="Design system">
-          The theme offers some very handy utilities to help you build your website faster.
+        <Feature icon="lucide:rocket" title="Messier" href="https://github.com/broccoliiiiiiiiiiiiii/messier">
+          web app for managing messier astronomy games.
         </Feature>
       </div>
     </div>
@@ -66,9 +39,8 @@ import Faq from '@components/Faq.astro'
       reaching WCAG AA compliance.
     </p>
   </ContentMedia>
-  <!-- <Faq /> -->
 
-   <section class="my-64">
+  <section class="my-64">
     <div class="space-content container">
       <h2 class="text-6xl">Our community</h2>
       <p class="text-2xl">
