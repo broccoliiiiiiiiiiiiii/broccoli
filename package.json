@@ -27,10 +27,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/incluud/accessible-astro-starter.git"
+    "url": "git+https://github.com/broccoliiiiiiiiiiiiii/broccoli"
   },
   "bugs": {
-    "url": "https://github.com/incluud/accessible-astro-starter/issues"
+    "url": "https://github.com/broccoliiiiiiiiiiiiii/broccoli/issues"
   },
   "devDependencies": {
     "@astrojs/mdx": "^4.2.5",
