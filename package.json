@@ -54,6 +54,7 @@
     "tailwindcss": "^4.1.4"
   },
   "dependencies": {
+    "@astrojs/react": "^4.3.0",
     "@tailwindcss/vite": "^4.1.4",
     "accessible-astro-components": "^4.1.1"
   }

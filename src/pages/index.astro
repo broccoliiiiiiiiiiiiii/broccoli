@@ -6,10 +6,12 @@ import Counter from '@components/Counter.astro'
 import ContentMedia from '@components/ContentMedia.astro'
 import ExternalLink from '@components/ExternalLink.astro'
 import { Accordion, AccordionItem, Avatar, AvatarGroup } from 'accessible-astro-components'
+import { StarsBackground } from "@components/StartsBackground";
 ---
 
 <DefaultLayout title="Home">
   <Hero />
+  <StarsBackground client:load />
   <section class="my-64">
     <div class="container">
       <h2 class="mb-16 text-6xl">Features</h2>
