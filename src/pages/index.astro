@@ -1,0 +1,77 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import Hero from '@components/Hero.astro'
+import Feature from '@components/Feature.astro'
+import Counter from '@components/Counter.astro'
+import ContentMedia from '@components/ContentMedia.astro'
+import ExternalLink from '@components/ExternalLink.astro'
+import { Avatar, AvatarGroup } from 'accessible-astro-components'
+import { StarsBackground } from '@components/StartsBackground'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <StarsBackground client:load />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Projects</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="lucide:rocket" title="Messier" href="https://github.com/broccoliiiiiiiiiiiiii/messier">
+          web app for managing messier astronomy games.
+        </Feature>
+      </div>
+    </div>
+  </section>
+  <ContentMedia imgSrc="/accessible-components.webp">
+    <h2>Accessible components</h2>
+    <p class="text-2xl">
+      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
+      lot of others are integrated using a <ExternalLink href="https://github.com/broccoliiiiiiiiiiiiii"
+        >separate package</ExternalLink
+      >. They'll get you up and running in building an accessible solution for your visitors.
+    </p>
+  </ContentMedia>
+  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
+    <h2>WCAG 2.2 AA compliant</h2>
+    <p class="text-2xl">
+      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
+      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
+      reaching WCAG AA compliance.
+    </p>
+  </ContentMedia>
+
+  <section class="my-64">
+    <div class="space-content container">
+      <h2 class="text-6xl">Our community</h2>
+      <p class="text-2xl">
+        We're a community of developers who are passionate about making the web more accessible. We're always looking
+        for new ways to improve the accessibility of the web.
+      </p>
+      <AvatarGroup display="grid" gridItemsSize="300px" gridGap="2rem">
+        <Avatar initials="K" title="Karim" subtitle="Manager" />
+        <Avatar initials="E" title="Esirango" subtitle="Frontend Developer" />
+        <Avatar initials="A" title="Ahmadreza" subtitle="Fullstack Developer" />
+      </AvatarGroup>
+    </div>
+  </section>
+
+  <section class="mt-64 mb-32">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Impact in numbers</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+        <Counter count="900+" title="Stars" sub="On GitHub" />
+        <Counter count="25+" title="Accessible" sub="Components" />
+        <Counter count="400+" title="Commits" sub="Merged" />
+        <Counter count="48+" title="Months" sub="Since launch" />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
+
+<style>
+  .avatar {
+    border: 1px solid var(--border-color-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-s);
+  }
+</style>

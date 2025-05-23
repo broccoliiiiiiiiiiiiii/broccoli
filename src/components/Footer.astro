@@ -1,0 +1,35 @@
+---
+import CallToAction from './CallToAction.astro'
+import ExternalLink from './ExternalLink.astro'
+import Logo from './Logo.astro'
+
+/**
+ * Footer Component
+ *
+ * @description A component that displays the footer of the website
+ */
+const currentYear = new Date().getFullYear()
+---
+
+<footer class="z-10">
+  <CallToAction />
+
+  <section class="py-8">
+    <div class="container flex flex-col gap-4 md:flex-row md:justify-between">
+      <p>
+        &copy; {currentYear} - Starter Theme for <a href="https://astro.build/">Astro</a>.
+      </p>
+      <p>
+        Made with ❤️ by <a href="https://github.com/esirango">Esirango</a>. Part of <a
+          href="https://github.com/broccoliiiiiiiiiiiiii">Broccoli</a
+        >.
+      </p>
+    </div>
+  </section>
+</footer>
+
+<style>
+  section {
+    border-top: 1px solid var(--border-color-subtle);
+  }
+</style>
