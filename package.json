@@ -4,12 +4,14 @@
   "version": "4.0.0",
   "author": "Incluud",
   "license": "MIT",
-  "homepage": "https://accessible-astro.netlify.app/",
+  "homepage": "https://github.com/broccoliiiiiiiiiiiiii/broccoli",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "format": "prettier --write . --config .prettierrc --ignore-path .prettierignore --cache"
   },
   "keywords": [
@@ -56,6 +58,7 @@
   "dependencies": {
     "@astrojs/react": "^4.3.0",
     "@tailwindcss/vite": "^4.1.4",
-    "accessible-astro-components": "^4.1.1"
+    "accessible-astro-components": "^4.1.1",
+    "gh-pages": "^6.3.0"
   }
 }
