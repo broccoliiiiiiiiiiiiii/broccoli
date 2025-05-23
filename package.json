@@ -11,7 +11,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "format": "prettier --write . --config .prettierrc --ignore-path .prettierignore --cache"
   },
   "keywords": [

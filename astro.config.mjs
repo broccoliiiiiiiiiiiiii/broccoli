@@ -9,7 +9,7 @@ import react from '@astrojs/react'
 // https://astro.build/config
 export default defineConfig({
   compressHTML: true,
-  site: 'https://accessible-astro-starter.incluud.dev',
+  site: 'https://broccoliiiiiiiiiiiiii.github.io/broccoli/',
   integrations: [mdx(), icon(), compress(), react()],
   vite: {
     css: {
