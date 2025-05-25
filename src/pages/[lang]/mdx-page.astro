@@ -1,0 +1,9 @@
+---
+import MdxPageContent from '../../content/mdx-page-content.mdx'
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'fa' } }]
+}
+---
+
+<MdxPageContent />

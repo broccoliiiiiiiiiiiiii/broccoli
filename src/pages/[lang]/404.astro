@@ -1,5 +1,9 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }]
+}
 ---
 
 <DefaultLayout title="404">
