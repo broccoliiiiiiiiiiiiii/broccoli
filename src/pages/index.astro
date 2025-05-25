@@ -3,10 +3,21 @@ const base = import.meta.env.BASE_URL
 ---
 
 <script define:vars={{ base }}>
+  // Ensure base path is properly set for all assets
+  document.documentElement.dataset.base = base
+
   const preferredLang = navigator.language.startsWith('fa') ? 'fa' : 'en'
-  window.location.href = `${base}/${preferredLang}`
+  // Remove any trailing slashes from base and ensure proper path joining
+  const cleanBase = base.replace(/\/+$/, '')
+  window.location.href = `${cleanBase}/${preferredLang}`
 </script>
 
 <div class="flex min-h-screen items-center justify-center">
   <div class="border-primary h-32 w-32 animate-spin rounded-full border-t-2 border-b-2"></div>
 </div>
+
+<style is:global>
+  :root {
+    --base-path: var(--base, '');
+  }
+</style>

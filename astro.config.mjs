@@ -13,10 +13,20 @@ export default defineConfig({
   output: 'static',
   compressHTML: true,
   build: {
-    assets: '_assets',
+    assets: 'assets',
   },
   integrations: [mdx(), icon(), compress(), react()],
   vite: {
+    build: {
+      assetsDir: 'assets',
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[name][extname]',
+          chunkFileNames: 'assets/[name].js',
+          entryFileNames: 'assets/[name].js',
+        },
+      },
+    },
     css: {
       preprocessorOptions: {
         scss: {
