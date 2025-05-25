@@ -9,6 +9,7 @@ import react from '@astrojs/react'
 // https://astro.build/config
 export default defineConfig({
   base: '/broccoli/',
+  output: 'static',
   compressHTML: true,
   site: 'https://broccoliiiiiiiiiiiiii.github.io/broccoli/',
   integrations: [mdx(), icon(), compress(), react()],
