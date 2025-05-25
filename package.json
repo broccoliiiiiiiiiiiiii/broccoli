@@ -11,7 +11,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "predeploy": "astro build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "astro build && gh-pages -d dist",
     "format": "prettier --write . --config .prettierrc --ignore-path .prettierignore --cache"
   },
   "keywords": [
@@ -46,6 +46,7 @@
     "eslint": "^9.0.0",
     "eslint-plugin-astro": "^1.3.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-css-order": "^2.1.2",
@@ -58,7 +59,6 @@
   "dependencies": {
     "@astrojs/react": "^4.3.0",
     "@tailwindcss/vite": "^4.1.4",
-    "accessible-astro-components": "^4.1.1",
-    "gh-pages": "^6.3.0"
+    "accessible-astro-components": "^4.1.1"
   }
 }

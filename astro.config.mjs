@@ -10,8 +10,8 @@ import react from '@astrojs/react'
 export default defineConfig({
   base: '/broccoli/',
   output: 'static',
-  compressHTML: true,
   site: 'https://broccoliiiiiiiiiiiiii.github.io/broccoli/',
+  compressHTML: true,
   integrations: [mdx(), icon(), compress(), react()],
   vite: {
     css: {
