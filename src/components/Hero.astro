@@ -14,7 +14,8 @@ interface Props {
   src?: string
 }
 
-const { src = '/broccoli/astronaut-hero-img.webp' }: Props = Astro.props
+const base = import.meta.env.BASE_URL
+const { src = `${base}astronaut-hero-img.webp` }: Props = Astro.props
 ---
 
 <section class="hero my-24">

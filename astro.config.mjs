@@ -12,6 +12,9 @@ export default defineConfig({
   base: 'broccoli',
   output: 'static',
   compressHTML: true,
+  build: {
+    assets: '_assets',
+  },
   integrations: [mdx(), icon(), compress(), react()],
   vite: {
     css: {
