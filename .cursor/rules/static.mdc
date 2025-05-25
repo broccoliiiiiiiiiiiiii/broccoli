@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Static Output
+
+- take a look at @astro.config.mjs and make sure the code you right works on astro static output.

@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Project Stack
+
+- we are using astro v5. checkout @package.json for more details. 

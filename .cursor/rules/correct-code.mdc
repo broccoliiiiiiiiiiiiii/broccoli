@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Correct Code
+
+- make sure the code you write works on dev and prod mode (we are live using github pages)

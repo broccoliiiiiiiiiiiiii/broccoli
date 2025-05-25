@@ -31,6 +31,3 @@ pnpm-lock.yaml
 
 # astro build files
 .astro
-
-# cursor rules
-.cursor/rules
