@@ -1,0 +1,12 @@
+---
+const base = import.meta.env.BASE_URL
+---
+
+<script define:vars={{ base }}>
+  const preferredLang = navigator.language.startsWith('fa') ? 'fa' : 'en'
+  window.location.href = `${base}/${preferredLang}`
+</script>
+
+<div class="flex min-h-screen items-center justify-center">
+  <div class="border-primary h-32 w-32 animate-spin rounded-full border-t-2 border-b-2"></div>
+</div>

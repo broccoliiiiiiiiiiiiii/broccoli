@@ -26,6 +26,9 @@ yarn-error.log*
 # package lock
 package-lock.json
 
+# pnpm lock
+pnpm-lock.yaml
+
 # astro build files
 .astro
 
