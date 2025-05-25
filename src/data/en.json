@@ -1,6 +1,9 @@
 {
   "title": "Home",
+  "teamTitle": "Broccoli Team",
+  "teamName": "Broccoli",
   "projects": "Projects",
+  "slogan": "Code Fresh, Code Green We're {brand}",
   "projectDescription": "web app for managing messier astronomy games.",
   "community": "Our community",
   "communityDescription": "We're a community of developers who are passionate about making the web more accessible...",
