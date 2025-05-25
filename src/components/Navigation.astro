@@ -49,7 +49,7 @@ import Logo from './Logo.astro'
           if (currentPathname.includes(menuItem.pathname.replaceAll('/', '')) && menuItem.textContent !== 'Home') {
             menuItem.classList.add('is-active')
             menuItem.setAttribute('aria-current', 'page')
-          } else if (menuItem.textContent === 'Home' && currentPathname === '/') {
+          } else if (menuItem.textContent === 'Home' && currentPathname === '/broccoli') {
             menuItem.classList.add('is-active')
             menuItem.setAttribute('aria-current', 'page')
           }
@@ -235,7 +235,7 @@ import Logo from './Logo.astro'
 </script>
 
 <style lang="scss" is:global>
-  @use '/public/assets/scss/base/mixins' as *;
+  @use '../assets/scss/base/mixins' as *;
 
   #main-navigation {
     > .container {
