@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import logo from '../assets/img/logo.png'
+import { getLocaleFromPath } from '../utils/locale'
 
 /**
  * Logo Component
@@ -16,9 +17,10 @@ interface Props {
 }
 
 const { loading = 'eager' }: Props = Astro.props
+const { currentLocale } = getLocaleFromPath(Astro.url.pathname)
 ---
 
-<a href="/" class="flex items-center gap-2 !no-underline">
+<a href={`/${currentLocale}`} class="flex items-center gap-2 !no-underline">
   <Image src={logo} alt="Accessible Astro Logo" width="47" height="37" loading={loading} />
   <span class="font-bold">Broccoli Team</span>
 </a>

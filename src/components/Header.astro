@@ -2,17 +2,9 @@
 import Navigation from '../components/Navigation.astro'
 import { DarkMode, SkipLink } from 'accessible-astro-components'
 import { Icon } from 'astro-icon/components'
+import { getLocaleFromPath } from '../utils/locale'
 
-const { lang } = Astro.params
-
-const { pathname } = Astro.url
-const segments = pathname.split('/')
-const currentLocale = segments[1] // مثلا 'fa' یا 'en'
-const newLocale = currentLocale === 'fa' ? 'en' : 'fa'
-
-// جایگزینی فقط زبان در URL
-segments[1] = newLocale
-const newPath = segments.join('/')
+const { currentLocale, newLocale, newPath } = getLocaleFromPath(Astro.url.pathname)
 
 /**
  * Header Component
@@ -25,7 +17,7 @@ const newPath = segments.join('/')
   <SkipLink />
   <Navigation>
     <li class="menu-item">
-      <a href={`/${lang}`}>Home</a>
+      <a href={`${currentLocale}`}>Home</a>
     </li>
 
     <li class="menu-item has-dropdown">
@@ -35,7 +27,7 @@ const newPath = segments.join('/')
       </button>
       <ul class="dropdown-menu">
         <li class="submenu-item">
-          <a href=`/${lang}/messier`>Messier</a>
+          <a href={`${currentLocale}/messier`}>Messier</a>
         </li>
       </ul>
     </li>
@@ -43,15 +35,15 @@ const newPath = segments.join('/')
       <a href="https://accessible-astro.incluud.dev/">Docs </a>
     </li> -->
     <li class="menu-item type-icon animate-rotate">
-      <a href="https://github.com/broccoliiiiiiiiiiiiii" target="_blank">
+      <a href="https://github.com/broccoliiiiiiiiiiiiii" target="_blank" rel="noopener noreferrer">
         <Icon name="lucide:github" />
         <span class="sr-only">Go to the GitHub page</span>
       </a>
     </li>
 
     <li class="menu-item">
-      <a href={newPath}>
-        {currentLocale === 'fa' ? 'English' : 'فارسی'}
+      <a href={`${newPath}`} hreflang={newLocale}>
+        {currentLocale === '/fa' ? 'English' : 'فارسی'}
       </a>
     </li>
     <!-- <li class="menu-item type-icon animate-rotate"> -->
