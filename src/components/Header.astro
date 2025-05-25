@@ -3,6 +3,17 @@ import Navigation from '../components/Navigation.astro'
 import { DarkMode, SkipLink } from 'accessible-astro-components'
 import { Icon } from 'astro-icon/components'
 
+const { lang } = Astro.params
+
+const { pathname } = Astro.url
+const segments = pathname.split('/')
+const currentLocale = segments[1] // مثلا 'fa' یا 'en'
+const newLocale = currentLocale === 'fa' ? 'en' : 'fa'
+
+// جایگزینی فقط زبان در URL
+segments[1] = newLocale
+const newPath = segments.join('/')
+
 /**
  * Header Component
  *
@@ -14,7 +25,13 @@ import { Icon } from 'astro-icon/components'
   <SkipLink />
   <Navigation>
     <li class="menu-item">
-      <a href="/">Home</a>
+      <a href={newPath}>
+        {currentLocale === 'fa' ? 'English' : 'فارسی'}
+      </a>
+    </li>
+
+    <li class="menu-item">
+      <a href={`/${lang}`}>Home</a>
     </li>
 
     <li class="menu-item has-dropdown">
@@ -24,7 +41,7 @@ import { Icon } from 'astro-icon/components'
       </button>
       <ul class="dropdown-menu">
         <li class="submenu-item">
-          <a href="/messier">Messier</a>
+          <a href=`/${lang}/messier`>Messier</a>
         </li>
       </ul>
     </li>

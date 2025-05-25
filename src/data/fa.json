@@ -1,0 +1,19 @@
+{
+  "title": "خانه",
+  "projects": "پروژه‌ها",
+  "projectDescription": "اپ وب برای مدیریت بازی‌های نجوم مسیه.",
+  "community": "جامعه ما",
+  "communityDescription": "ما جامعه‌ای از توسعه‌دهندگانی هستیم که به دسترس‌پذیری وب اهمیت می‌دهیم...",
+  "communityMembers": [
+    { "initials": "K", "title": "کریم", "subtitle": "مدیر" },
+    { "initials": "E", "title": "اسی‌رنگو", "subtitle": "توسعه‌دهنده فرانت‌اند" },
+    { "initials": "A", "title": "احمدرضا", "subtitle": "توسعه‌دهنده فول‌استک" }
+  ],
+  "impactTitle": "تاثیر به اعداد",
+  "impactItems": [
+    { "count": "۹۰۰+", "title": "ستاره‌ها", "sub": "در GitHub" },
+    { "count": "۲۵+", "title": "کامپوننت‌های", "sub": "قابل دسترس" },
+    { "count": "۴۰۰+", "title": "کامیت", "sub": "ادغام شده" },
+    { "count": "۴۸+", "title": "ماه", "sub": "از زمان شروع" }
+  ]
+}

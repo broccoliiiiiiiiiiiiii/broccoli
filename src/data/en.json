@@ -1,0 +1,19 @@
+{
+  "title": "Home",
+  "projects": "Projects",
+  "projectDescription": "web app for managing messier astronomy games.",
+  "community": "Our community",
+  "communityDescription": "We're a community of developers who are passionate about making the web more accessible...",
+  "communityMembers": [
+    { "initials": "K", "title": "Karim", "subtitle": "Manager" },
+    { "initials": "E", "title": "Esirango", "subtitle": "Frontend Developer" },
+    { "initials": "A", "title": "Ahmadreza", "subtitle": "Fullstack Developer" }
+  ],
+  "impactTitle": "Impact in numbers",
+  "impactItems": [
+    { "count": "900+", "title": "Stars", "sub": "On GitHub" },
+    { "count": "25+", "title": "Accessible", "sub": "Components" },
+    { "count": "400+", "title": "Commits", "sub": "Merged" },
+    { "count": "48+", "title": "Months", "sub": "Since launch" }
+  ]
+}

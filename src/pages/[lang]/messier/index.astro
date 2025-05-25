@@ -1,4 +1,8 @@
 ---
+export async function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'fa' } }]
+}
+
 import ContentMedia from '@components/ContentMedia.astro'
 import ExternalLink from '@components/ExternalLink.astro'
 import DefaultLayout from '@layouts/DefaultLayout.astro'
