@@ -5,9 +5,9 @@
   "community": "جامعه ما",
   "communityDescription": "ما جامعه‌ای از توسعه‌دهندگانی هستیم که به دسترس‌پذیری وب اهمیت می‌دهیم...",
   "communityMembers": [
-    { "initials": "K", "title": "کریم", "subtitle": "مدیر" },
-    { "initials": "E", "title": "اسی‌رنگو", "subtitle": "توسعه‌دهنده فرانت‌اند" },
-    { "initials": "A", "title": "احمدرضا", "subtitle": "توسعه‌دهنده فول‌استک" }
+    { "initials": "A", "title": "احمدرضا", "subtitle": "توسعه‌دهنده فول‌استک" },
+    { "initials": "K", "title": "کریم", "subtitle": "مدیر پروژه" },
+    { "initials": "E", "title": "اسی‌رنگو", "subtitle": "توسعه‌دهنده فرانت‌اند" }
   ],
   "impactTitle": "تاثیر به اعداد",
   "impactItems": [

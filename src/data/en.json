@@ -5,9 +5,9 @@
   "community": "Our community",
   "communityDescription": "We're a community of developers who are passionate about making the web more accessible...",
   "communityMembers": [
-    { "initials": "K", "title": "Karim", "subtitle": "Manager" },
-    { "initials": "E", "title": "Esirango", "subtitle": "Frontend Developer" },
-    { "initials": "A", "title": "Ahmadreza", "subtitle": "Fullstack Developer" }
+    { "initials": "A", "title": "Ahmadreza", "subtitle": "Fullstack Developer" },
+    { "initials": "K", "title": "Karim", "subtitle": "Project Manager" },
+    { "initials": "E", "title": "Esirango", "subtitle": "Frontend Developer" }
   ],
   "impactTitle": "Impact in numbers",
   "impactItems": [
