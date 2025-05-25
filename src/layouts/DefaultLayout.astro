@@ -4,6 +4,7 @@ import '../assets/scss/index.scss'
 import SiteMeta from '../components/SiteMeta.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import { StarsBackground } from '@components/StartsBackground'
 
 const {
   title = 'Astro',
@@ -28,6 +29,7 @@ const {
   <body>
     <Header />
     <main id="main-content" transition:animate="fade">
+      <StarsBackground client:load />
       <slot />
     </main>
     <Footer />

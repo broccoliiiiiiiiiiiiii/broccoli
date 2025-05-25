@@ -3,15 +3,11 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
 import Hero from '@components/Hero.astro'
 import Feature from '@components/Feature.astro'
 import Counter from '@components/Counter.astro'
-import ContentMedia from '@components/ContentMedia.astro'
-import ExternalLink from '@components/ExternalLink.astro'
 import { Avatar, AvatarGroup } from 'accessible-astro-components'
-import { StarsBackground } from '@components/StartsBackground'
 ---
 
 <DefaultLayout title="Home">
   <Hero />
-  <StarsBackground client:load />
   <section class="my-64">
     <div class="container">
       <h2 class="mb-16 text-6xl">Projects</h2>
@@ -22,23 +18,6 @@ import { StarsBackground } from '@components/StartsBackground'
       </div>
     </div>
   </section>
-  <ContentMedia imgSrc="/broccoli/accessible-components.webp">
-    <h2>Accessible components</h2>
-    <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <ExternalLink href="https://github.com/broccoliiiiiiiiiiiiii"
-        >separate package</ExternalLink
-      >. They'll get you up and running in building an accessible solution for your visitors.
-    </p>
-  </ContentMedia>
-  <ContentMedia imgSrc="/broccoli/wcag-compliant.webp" reverseImg={true}>
-    <h2>WCAG 2.2 AA compliant</h2>
-    <p class="text-2xl">
-      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
-      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
-      reaching WCAG AA compliance.
-    </p>
-  </ContentMedia>
 
   <section class="my-64">
     <div class="space-content container">
