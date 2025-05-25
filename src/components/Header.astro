@@ -25,12 +25,6 @@ const newPath = segments.join('/')
   <SkipLink />
   <Navigation>
     <li class="menu-item">
-      <a href={newPath}>
-        {currentLocale === 'fa' ? 'English' : 'فارسی'}
-      </a>
-    </li>
-
-    <li class="menu-item">
       <a href={`/${lang}`}>Home</a>
     </li>
 
@@ -52,6 +46,12 @@ const newPath = segments.join('/')
       <a href="https://github.com/broccoliiiiiiiiiiiiii">
         <Icon name="lucide:github" />
         <span class="sr-only">Go to the GitHub page</span>
+      </a>
+    </li>
+
+    <li class="menu-item">
+      <a href={newPath}>
+        {currentLocale === 'fa' ? 'English' : 'فارسی'}
       </a>
     </li>
     <!-- <li class="menu-item type-icon animate-rotate"> -->
