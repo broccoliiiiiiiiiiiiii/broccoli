@@ -21,7 +21,7 @@
   ],
   "messier": {
     "name": "Messier",
-    "description": "A web app for managing Messier astronomy games, helping users explore, organize, and enjoy challenges based on Messier objects.",
+    "description": "A modern web application for managing Messier astronomy games — designed to help users explore the wonders of the night sky, organize their progress, and enjoy interactive challenges inspired by the iconic Messier objects.",
     "sections": [
       {
         "title": "Users section home page",

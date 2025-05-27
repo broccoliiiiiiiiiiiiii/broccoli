@@ -4,11 +4,11 @@ export async function getStaticPaths() {
 }
 
 import ContentMedia from '@components/ContentMedia.astro'
-import ExternalLink from '@components/ExternalLink.astro'
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 
 import fa from '../../../data/fa.json'
 import en from '../../../data/en.json'
+import { Media } from 'accessible-astro-components'
 
 const { lang } = Astro.params
 const data = lang === 'fa' ? fa : en
@@ -17,9 +17,16 @@ const data = lang === 'fa' ? fa : en
 <DefaultLayout title={data.messier.name}>
   <section class="mt-4 mb-[-100px]">
     <div class="container">
-      <h2 class="text-6xl">{data.messier.name}</h2>
+      <div class="flex items-center gap-4">
+        <h2 class="text-6xl">{data.messier.name}</h2>
+        <img class="h-10 w-10" src="/broccoli/messier/messier.png" />
+      </div>
+      <p class="mt-8">
+        {data.messier.description}
+      </p>
     </div>
   </section>
+
   {
     data.messier.sections.map((section) => (
       <ContentMedia imgSrc={section.image}>
