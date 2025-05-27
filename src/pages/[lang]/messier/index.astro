@@ -6,32 +6,54 @@ export async function getStaticPaths() {
 import ContentMedia from '@components/ContentMedia.astro'
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 
-import fa from '../../../data/fa.json'
-import en from '../../../data/en.json'
-import { Media } from 'accessible-astro-components'
-
 const { lang } = Astro.params
-const data = lang === 'fa' ? fa : en
+
+const allDocs = [
+  ...(await Astro.glob('../../../data/messier/fa/*.md')),
+  ...(await Astro.glob('../../../data/messier/en/*.md')),
+]
+
+const filteredDocs = allDocs.filter((doc) => doc.frontmatter.lang === lang)
+
+const introDoc = filteredDocs.find((doc) => doc.frontmatter.type === 'intro')
+const sectionDocs = filteredDocs
+  .filter((doc) => doc.frontmatter.type === 'section')
+  .sort((a, b) => a.frontmatter.order - b.frontmatter.order)
+
+if (!introDoc) {
+  throw new Error('Intro document not found')
+}
+
+const { Content: IntroContent, frontmatter: introFront } = await introDoc
+
+const sectionContents = await Promise.all(
+  sectionDocs.map(async (doc) => {
+    const { Content, frontmatter } = await doc
+    return { Content, frontmatter }
+  }),
+)
 ---
 
-<DefaultLayout title={data.messier.name}>
+<DefaultLayout title={introFront.title}>
   <section class="mt-4 mb-[-100px]">
     <div class="container">
       <div class="flex items-center gap-4">
-        <h2 class="text-6xl">{data.messier.name}</h2>
+        <h2 class="text-6xl">{introFront.title}</h2>
         <img class="h-10 w-10" src="/broccoli/messier/messier.png" />
       </div>
-      <p class="mt-8">
-        {data.messier.description}
-      </p>
+      <article class="prose mt-8">
+        <IntroContent />
+      </article>
     </div>
   </section>
 
   {
-    data.messier.sections.map((section) => (
-      <ContentMedia imgSrc={section.image}>
-        <h2>{section.title}</h2>
-        <p class="text-2xl">{section.description}</p>
+    sectionContents.map(({ Content, frontmatter }) => (
+      <ContentMedia imgSrc={frontmatter.image}>
+        <h2>{frontmatter.title}</h2>
+        <article class="prose text-2xl">
+          <Content />
+        </article>
       </ContentMedia>
     ))
   }
