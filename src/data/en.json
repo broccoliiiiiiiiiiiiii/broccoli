@@ -14,7 +14,7 @@
   ],
   "impactTitle": "Impact in numbers",
   "impactItems": [
-    { "count": "900+", "title": "Stars", "sub": "On GitHub" },
+    { "count": "3", "title": "Members", "sub": "Of Team" },
     { "count": "25+", "title": "Accessible", "sub": "Components" },
     { "count": "400+", "title": "Commits", "sub": "Merged" },
     { "count": "48+", "title": "Months", "sub": "Since launch" }
