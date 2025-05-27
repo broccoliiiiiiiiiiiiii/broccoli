@@ -30,11 +30,31 @@ const fullImgSrc = imgSrc.startsWith('http') ? imgSrc : joinBasePath(base, imgSr
 <section class="my-48">
   <div class="container">
     <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
-      {!reverseImg ? <Media class="rounded-lg" src={fullImgSrc} /> : ''}
+      {
+        !reverseImg ? (
+          <div class="relative">
+            <div class="absolute inset-0 z-5 rounded-lg bg-gradient-to-tr from-[#32cd32] via-cyan-200 to-cyan-500 opacity-50" />
+            <Media class="relative z-10 rounded-lg p-10" src={fullImgSrc} />
+          </div>
+        ) : (
+          ''
+        )
+      }
+
       <div class="space-content flex flex-col justify-center">
         <slot />
       </div>
-      {reverseImg ? <Media class="rounded-lg" src={fullImgSrc} /> : ''}
+
+      {
+        reverseImg ? (
+          <div class="relative">
+            <div class="absolute inset-0 z-0 rounded-lg bg-gradient-to-tr from-[#32cd32] via-cyan-200 to-cyan-700 opacity-50" />
+            <Media class="relative z-10 rounded-lg p-10" src={fullImgSrc} />
+          </div>
+        ) : (
+          ''
+        )
+      }
     </div>
   </div>
 </section>

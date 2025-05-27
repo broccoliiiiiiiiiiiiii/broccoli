@@ -18,5 +18,21 @@
     { "count": "25+", "title": "Accessible", "sub": "Components" },
     { "count": "400+", "title": "Commits", "sub": "Merged" },
     { "count": "48+", "title": "Months", "sub": "Since launch" }
-  ]
+  ],
+  "messier": {
+    "name": "Messier",
+    "description": "A web app for managing Messier astronomy games, helping users explore, organize, and enjoy challenges based on Messier objects.",
+    "sections": [
+      {
+        "title": "Users section home page",
+        "image": "/messier/messier-screenshot2.png",
+        "description": "The first page of the site. Includes links to enter the marathon and a list of marathons."
+      },
+      {
+        "title": "Admin Panel Features",
+        "image": "/messier/messier-screenshot1.png",
+        "description": "Admin panel page. With the ability to manage users, teams, marathons, Messier objects, etc. Developed by payload."
+      }
+    ]
+  }
 }
