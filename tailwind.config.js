@@ -6,4 +6,5 @@ export default {
   },
   plugins: [],
   darkMode: ['class', '.darkmode'],
+  safelist: ['initials-container', 'initials'],
 }
