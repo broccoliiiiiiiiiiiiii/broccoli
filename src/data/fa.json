@@ -12,9 +12,33 @@
   "community": "جامعه ما",
   "communityDescription": "ما جامعه‌ای از توسعه‌دهندگانی هستیم که به دسترس‌پذیری وب اهمیت می‌دهیم...",
   "communityMembers": [
-    { "initials": "A", "title": "احمدرضا", "subtitle": "توسعه‌دهنده فول‌استک" },
-    { "initials": "K", "title": "کریم", "subtitle": "مدیر پروژه" },
-    { "initials": "E", "title": "اسی‌رنگو", "subtitle": "توسعه‌دهنده فرانت‌اند" }
+    {
+      "initials": "A",
+      "title": "احمدرضا",
+      "subtitle": "توسعه‌دهنده فول‌استک",
+      "links": {
+        "telegram": "https://t.me/Ahmad_fDev",
+        "github": "https://github.com/ahmad-184"
+      }
+    },
+    {
+      "initials": "K",
+      "title": "کریم",
+      "subtitle": "مدیر پروژه",
+      "links": {
+        "telegram": "https://t.me/pmkarim",
+        "github": "https://github.com/imkarimkarim"
+      }
+    },
+    {
+      "initials": "E",
+      "title": "اسی‌رنگو",
+      "subtitle": "توسعه‌دهنده فرانت‌اند",
+      "links": {
+        "telegram": "https://t.me/esirango",
+        "github": "https://github.com/esirango"
+      }
+    }
   ],
   "impactTitle": "تاثیر به اعداد",
   "impactItems": [

@@ -9,9 +9,33 @@
   "community": "Our community",
   "communityDescription": "We're a community of developers who are passionate about making the web more accessible...",
   "communityMembers": [
-    { "initials": "A", "title": "Ahmadreza", "subtitle": "Fullstack Developer" },
-    { "initials": "K", "title": "Karim", "subtitle": "Project Manager" },
-    { "initials": "E", "title": "Esirango", "subtitle": "Frontend Developer" }
+    {
+      "initials": "A",
+      "title": "Ahmadreza",
+      "subtitle": "Fullstack Developer",
+      "links": {
+        "telegram": "https://t.me/Ahmad_fDev",
+        "github": "https://github.com/ahmad-184"
+      }
+    },
+    {
+      "initials": "K",
+      "title": "Karim",
+      "subtitle": "Project Manager",
+      "links": {
+        "telegram": "https://t.me/pmkarim",
+        "github": "https://github.com/imkarimkarim"
+      }
+    },
+    {
+      "initials": "E",
+      "title": "Esirango",
+      "subtitle": "Frontend Developer",
+      "links": {
+        "telegram": "https://t.me/esirango",
+        "github": "https://github.com/esirango"
+      }
+    }
   ],
   "impactTitle": "Impact in numbers",
   "impactItems": [
