@@ -7,14 +7,19 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
 import Hero from '@components/Hero.astro'
 import Feature from '@components/Feature.astro'
 import Counter from '@components/Counter.astro'
-import { Avatar, AvatarGroup } from 'accessible-astro-components'
+import { AvatarGroup } from 'accessible-astro-components'
 
 import fa from '../../data/fa.json'
 import en from '../../data/en.json'
 import { Icon } from 'astro-icon/components'
+import { getLocaleFromPath } from 'src/utils/locale'
+import { toPersianNumber } from 'src/utils/toPersianNumber'
 
 const { lang } = Astro.params
 const data = lang === 'fa' ? fa : en
+
+const { currentLocale } = getLocaleFromPath(Astro.url.pathname)
+const base = import.meta.env.BASE_URL
 ---
 
 <DefaultLayout lang={lang} title={data.title} dark>
@@ -23,7 +28,7 @@ const data = lang === 'fa' ? fa : en
     <div class="container">
       <h2 class="mb-16 text-6xl">{data.projects}</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="lucide:rocket" title="Messier" href="https://messier.ir">
+        <Feature icon="lucide:rocket" title="Messier" href={`${base}/${currentLocale}/messier`}>
           {data.projectDescription}
         </Feature>
       </div>
@@ -33,14 +38,18 @@ const data = lang === 'fa' ? fa : en
   <section class="my-64">
     <div class="space-content container">
       <h2 class="text-6xl">{data.community}</h2>
-      <p class="text-2xl">{data.communityDescription}</p>
+      <!-- <p class="text-2xl">{data.communityDescription}</p> -->
       <AvatarGroup display="grid" gridItemsSize="300px" gridGap="2rem">
         {
           data.communityMembers.map((member) => (
             <div class="mt-3 flex items-center justify-between gap-2 rounded-lg border border-gray-700 p-4 shadow">
               <div class="flex items-center gap-3">
                 <div class="initials-container rounded-full">
-                  <span class="initials">{member.initials}</span>{' '}
+                  {member.image ? (
+                    <img src={member.image} alt={member.title} class="rounded-full" />
+                  ) : (
+                    <span class="initials">{member.initials}</span>
+                  )}
                 </div>
                 <div>
                   <div class="text-[20px] font-bold lg:text-xl">{member.title}</div>
@@ -80,7 +89,15 @@ const data = lang === 'fa' ? fa : en
     <div class="container">
       <h2 class="mb-16 text-6xl">{data.impactTitle}</h2>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        {data.impactItems.map((item) => <Counter count={item.count} title={item.title} sub={item.sub} />)}
+        {
+          data.impactItems.map((item) => (
+            <Counter
+              count={lang === 'fa' ? toPersianNumber(item.count) : item.count}
+              title={item.title}
+              sub={item.sub}
+            />
+          ))
+        }
       </div>
     </div>
   </section>

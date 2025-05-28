@@ -6,7 +6,7 @@
   "slogan": "Code Fresh, Code Green We're {brand}",
   "heroButtons": { "doc": "Read the docs", "github": "Star on GitHub" },
   "projectDescription": "web app for managing messier astronomy games.",
-  "community": "Our community",
+  "community": "Our Team",
   "communityDescription": "We're a community of developers who are passionate about making the web more accessible...",
   "communityMembers": [
     {
@@ -16,7 +16,8 @@
       "links": {
         "telegram": "https://t.me/Ahmad_fDev",
         "github": "https://github.com/ahmad-184"
-      }
+      },
+      "image": "members/ahmadreza.jpg"
     },
     {
       "initials": "K",
@@ -25,7 +26,8 @@
       "links": {
         "telegram": "https://t.me/pmkarim",
         "github": "https://github.com/imkarimkarim"
-      }
+      },
+      "image": "members/karim.jpg"
     },
     {
       "initials": "E",
@@ -34,15 +36,16 @@
       "links": {
         "telegram": "https://t.me/esirango",
         "github": "https://github.com/esirango"
-      }
+      },
+      "image": "members/esirango.jpg"
     }
   ],
   "impactTitle": "Impact in numbers",
   "impactItems": [
     { "count": "3", "title": "Members", "sub": "Of Team" },
-    { "count": "25+", "title": "Accessible", "sub": "Components" },
-    { "count": "400+", "title": "Commits", "sub": "Merged" },
-    { "count": "48+", "title": "Months", "sub": "Since launch" }
+    { "count": "30+", "title": "Accessible", "sub": "Components" },
+    { "count": "115+", "title": "Commits", "sub": "Merged" },
+    { "count": "2+", "title": "Months", "sub": "Since launch" }
   ],
   "messier": {
     "name": "Messier",

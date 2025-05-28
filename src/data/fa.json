@@ -9,7 +9,7 @@
     "github": "ستاره در گیت‌هاب"
   },
   "projectDescription": "اپ وب برای مدیریت بازی‌های نجوم مسیه.",
-  "community": "جامعه ما",
+  "community": "تیم ما",
   "communityDescription": "ما جامعه‌ای از توسعه‌دهندگانی هستیم که به دسترس‌پذیری وب اهمیت می‌دهیم...",
   "communityMembers": [
     {
@@ -19,7 +19,8 @@
       "links": {
         "telegram": "https://t.me/Ahmad_fDev",
         "github": "https://github.com/ahmad-184"
-      }
+      },
+      "image": "members/ahmadreza.jpg"
     },
     {
       "initials": "K",
@@ -28,7 +29,8 @@
       "links": {
         "telegram": "https://t.me/pmkarim",
         "github": "https://github.com/imkarimkarim"
-      }
+      },
+      "image": "members/karim.jpg"
     },
     {
       "initials": "E",
@@ -37,14 +39,15 @@
       "links": {
         "telegram": "https://t.me/esirango",
         "github": "https://github.com/esirango"
-      }
+      },
+      "image": "members/esirango.jpg"
     }
   ],
   "impactTitle": "تاثیر به اعداد",
   "impactItems": [
     { "count": "۳", "title": "تعداد اعضای", "sub": "تیم" },
-    { "count": "۲۵+", "title": "کامپوننت‌های", "sub": "قابل دسترس" },
-    { "count": "۴۰۰+", "title": "کامیت", "sub": "ادغام شده" },
+    { "count": "30+", "title": "کامپوننت‌های", "sub": "قابل دسترس" },
+    { "count": "115+", "title": "کامیت", "sub": "ادغام شده" },
     { "count": "۴۸+", "title": "ماه", "sub": "از زمان شروع" }
   ],
   "messier": {

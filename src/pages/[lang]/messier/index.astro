@@ -24,7 +24,7 @@ if (!introDoc) {
   throw new Error('Intro document not found')
 }
 
-const { Content: IntroContent, frontmatter: introFront } = await introDoc
+const { Content: IntroContent, frontmatter: introFront } = introDoc
 
 const sectionContents = await Promise.all(
   sectionDocs.map(async (doc) => {
@@ -38,7 +38,7 @@ const sectionContents = await Promise.all(
   <section class="mt-4 mb-[-100px]">
     <div class="container">
       <div class="flex items-center gap-4">
-        <h2 class="text-6xl">{introFront.title}</h2>
+        <a href="https://messier.ir" target="_blank"> <h2 class="text-6xl">{introFront.title}</h2></a>
         <img class="h-10 w-10" src="/broccoli/messier/messier.png" />
       </div>
       <article class="prose mt-8">

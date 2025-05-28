@@ -27,7 +27,7 @@ const { currentLocale } = getLocaleFromPath(Astro.url.pathname)
 const base = import.meta.env.BASE_URL
 ---
 
-<a href={`${base}${currentLocale}`} class="flex items-center gap-2 !no-underline">
+<a href={`${base}/${currentLocale}`} class="flex items-center gap-2 !no-underline">
   <Image src={logo} alt="Accessible Astro Logo" width="47" height="37" loading={loading} />
   <span class="font-bold">{data.teamTitle}</span>
 </a>
