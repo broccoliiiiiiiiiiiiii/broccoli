@@ -1,7 +1,11 @@
 ---
 import CallToAction from './CallToAction.astro'
-import ExternalLink from './ExternalLink.astro'
-import Logo from './Logo.astro'
+import fa from '../data/fa.json'
+import en from '../data/en.json'
+import { toPersianNumber } from 'src/utils/toPersianNumber'
+
+const { lang } = Astro.params
+const data = lang === 'fa' ? fa : en
 
 /**
  * Footer Component
@@ -17,13 +21,10 @@ const currentYear = new Date().getFullYear()
   <section class="py-8">
     <div class="container flex flex-col gap-4 md:flex-row md:justify-between">
       <p>
-        &copy; {currentYear} - Starter Theme for <a href="https://astro.build/">Astro</a>.
+        &copy; {lang === 'fa' ? toPersianNumber(currentYear) : currentYear} - {data.footer.copyrightText}
+        <a href="https://astro.build/">Astro</a>.
       </p>
-      <p>
-        Made with ❤️ by <a href="https://github.com/esirango">Esirango</a>. Part of <a
-          href="https://github.com/broccoliiiiiiiiiiiiii">Broccoli</a
-        >.
-      </p>
+      <p set:html={data.footer.developerTitle} />
     </div>
   </section>
 </footer>

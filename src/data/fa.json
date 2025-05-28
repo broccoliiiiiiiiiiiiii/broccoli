@@ -34,5 +34,11 @@
         "description": "صفحه پنل مدیریت؛ با قابلیت مدیریت کاربران، تیم‌ها، ماراتن‌ها، اجرام مسیه و... توسعه‌یافته با استفاده از Payload."
       }
     ]
+  },
+  "callToAction": { "title": "پروژه های ما را در GitHub ببینید", "linkText": "پروژه های تیم بروکلی" },
+
+  "footer": {
+    "copyrightText": "تم شروع برای",
+    "developerTitle": "ساخته شده با ❤️ توسط <a href='https://github.com/esirango'>اسی‌رنگو</a>. عضوی از <a href='https://github.com/broccoliiiiiiiiiiiiii'>بروکلی</a>."
   }
 }

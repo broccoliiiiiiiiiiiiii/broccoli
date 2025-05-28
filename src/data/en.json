@@ -34,5 +34,10 @@
         "description": "Admin panel page. With the ability to manage users, teams, marathons, Messier objects, etc. Developed by payload."
       }
     ]
+  },
+  "callToAction": { "title": "See our Projects on GitHub", "linkText": "Broccoli Team Projects" },
+  "footer": {
+    "copyrightText": "Starter Theme for",
+    "developerTitle": "Made with ❤️ by <a href='https://github.com/esirango'>Esirango</a>. Part of <a href='https://github.com/broccoliiiiiiiiiiiiii'>Broccoli</a>."
   }
 }

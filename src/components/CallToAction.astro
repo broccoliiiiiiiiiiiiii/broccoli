@@ -1,6 +1,12 @@
 ---
 import { Icon } from 'astro-icon/components'
 
+import fa from '../data/fa.json'
+import en from '../data/en.json'
+
+const { lang } = Astro.params
+const data = lang === 'fa' ? fa : en
+
 /**
  * CallToAction Component
  *
@@ -25,9 +31,9 @@ interface Props {
 }
 
 const {
-  title = 'See our Projects on GitHub',
+  title = data.callToAction.title,
   link = 'https://github.com/broccoliiiiiiiiiiiiii',
-  linkText = 'Broccoli Team Projects',
+  linkText = data.callToAction.linkText,
 } = Astro.props
 ---
 
