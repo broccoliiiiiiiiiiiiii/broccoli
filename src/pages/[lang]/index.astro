@@ -39,10 +39,8 @@ const data = lang === 'fa' ? fa : en
           data.communityMembers.map((member) => (
             <div class="mt-3 flex items-center justify-between gap-2 rounded-lg border border-gray-700 p-4 shadow">
               <div class="flex items-center gap-3">
-                <div class="initials-container rounded-full" data-astro-cid-mpbry7dl="" style="--size: 5rem;">
-                  <span class="initials" data-astro-cid-mpbry7dl="" style="--size: 5rem;">
-                    {member.initials}
-                  </span>{' '}
+                <div class="initials-container rounded-full">
+                  <span class="initials">{member.initials}</span>{' '}
                 </div>
                 <div>
                   <div class="text-[20px] font-bold lg:text-xl">{member.title}</div>
@@ -93,5 +91,24 @@ const data = lang === 'fa' ? fa : en
     border: 1px solid var(--border-color-subtle);
     border-radius: var(--radius-md);
     padding: var(--space-s);
+  }
+
+  .initials-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-color: var(--color-default-border, #ccc);
+    border-radius: 50%;
+    background-color: var(--color-default-bg, #f8f8f8);
+    width: 75px;
+    height: 75px;
+    color: var(--color-default-text, #fff);
+  }
+
+  .initials {
+    color: #fff;
+    font-weight: bold;
+    font-size: calc(var(--size, 80px) / 2.5);
   }
 </style>
