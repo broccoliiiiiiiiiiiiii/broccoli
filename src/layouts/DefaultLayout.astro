@@ -5,15 +5,19 @@ import SiteMeta from '../components/SiteMeta.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import { StarsBackground } from '@components/StartsBackground'
+import fa from '../data/fa.json'
+import en from '../data/en.json'
 
 const { lang } = Astro.params
 
+const data = lang === 'fa' ? fa : en
+
 const {
-  title = 'Astro',
+  title = data.title,
   description = 'A starter project with accessibility features using Astro static site builder. Contains accessible landmarks, skip links, a dark mode color scheme, better focus outline and keyboard menu navigation.',
   url = Astro.site,
-  image = 'social-preview-image.png',
-  author = 'Mark Teekman',
+  image = 'logo.png',
+  author = 'esirango',
 } = Astro.props
 ---
 

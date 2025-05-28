@@ -1,5 +1,11 @@
 ---
 import { ViewTransitions } from 'astro:transitions'
+import fa from '../data/fa.json'
+import en from '../data/en.json'
+
+const { lang } = Astro.params
+
+const data = lang === 'fa' ? fa : en
 
 /**
  * SiteMeta Component
@@ -29,9 +35,9 @@ interface Props {
   author?: string
 }
 
-const { title, description, url, image, author = 'Mark Teekman' } = Astro.props
+const { title, description, url, image, author } = Astro.props
 
-let subtitle = 'Accessible Astro Starter'
+let subtitle = data.teamName
 ---
 
 <!-- general meta -->
