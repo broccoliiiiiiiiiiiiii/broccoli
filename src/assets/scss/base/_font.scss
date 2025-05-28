@@ -101,6 +101,50 @@
   font-display: swap;
 }
 
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('/broccoli/fonts/vazir/Vazir.woff2') format('woff2'),
+    url('/broccoli/fonts/vazir/Vazir.woff') format('woff'),
+    url('/broccoli/fonts/vazir/Vazir.ttf') format('truetype');
+  font-family: 'Vazir';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url('/broccoli/fonts/vazir/Vazir-Bold.woff2') format('woff2'),
+    url('/broccoli/fonts/vazir/Vazir-Bold.woff') format('woff'),
+    url('/broccoli/fonts/vazir/Vazir-Bold.ttf') format('truetype');
+  font-family: 'Vazir';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  src:
+    url('/broccoli/fonts/vazir/Vazir-Light.woff2') format('woff2'),
+    url('/broccoli/fonts/vazir/Vazir-Light.woff') format('woff'),
+    url('/broccoli/fonts/vazir/Vazir-Light.ttf') format('truetype');
+  font-family: 'Vazir';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('/broccoli/fonts/vazir/Vazir-Medium.woff2') format('woff2'),
+    url('/broccoli/fonts/vazir/Vazir-Medium.woff') format('woff'),
+    url('/broccoli/fonts/vazir/Vazir-Medium.ttf') format('truetype');
+  font-family: 'Vazir';
+  font-display: swap;
+}
+
 @layer base {
   p {
     text-wrap: pretty;
