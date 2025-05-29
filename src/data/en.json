@@ -17,7 +17,7 @@
         "telegram": "https://t.me/Ahmad_fDev",
         "github": "https://github.com/ahmad-184"
       },
-      "image": "members/ahmadreza.jpg"
+      "image": "/broccoli/members/ahmadreza.jpg"
     },
     {
       "initials": "K",
@@ -27,7 +27,7 @@
         "telegram": "https://t.me/pmkarim",
         "github": "https://github.com/imkarimkarim"
       },
-      "image": "members/karim.jpg"
+      "image": "/broccoli/members/karim.jpg"
     },
     {
       "initials": "E",
@@ -37,7 +37,7 @@
         "telegram": "https://t.me/esirango",
         "github": "https://github.com/esirango"
       },
-      "image": "members/esirango.jpg"
+      "image": "/broccoli/members/esirango.jpg"
     }
   ],
   "impactTitle": "Impact in numbers",
